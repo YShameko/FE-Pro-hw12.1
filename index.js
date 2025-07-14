@@ -3,15 +3,11 @@
 function askURL() {
     do {
         strURL = prompt('Please enter this URL:');
-        if (strURL === null) {
-            strURL = '';
-            break;
-        }
-    } while(!strURL.trim());
+    } while(strURL !== null && !strURL.trim());
 }  
 
 function gotoURL () {
-    if (strURL.trim()) { location.href = strURL; }
+    if (strURL !== null && strURL.trim()) { location.href = strURL; }
     else { alert('You should enter the URL first.'); }
 }
 
